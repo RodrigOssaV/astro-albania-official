@@ -11,6 +11,7 @@
       "@core/*": ["src/components/core/*"],
       "@util/*": ["src/components/util/*"],
       "@shared/*": ["src/components/shared/*"],
+      "@content/*": ["src/components/content/*"],
       "@container/*": ["src/components/container/*"],
     }
   }
