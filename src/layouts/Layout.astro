@@ -1,5 +1,8 @@
 ---
+import Header from "@container/Header.astro";
 import Footer from "@shared/Footer.astro";
+import Navbar from "@shared/Navbar.astro";
+import LocationMap from "@view/LocationMap.astro";
 ---
 
 <!doctype html>
@@ -11,7 +14,10 @@ import Footer from "@shared/Footer.astro";
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Navbar />
+		<Header />
 		<slot />
+		<LocationMap />
 		<Footer />
 	</body>
 </html>
