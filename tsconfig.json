@@ -1,18 +1,41 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@icon/*": ["src/icons/*"],
-      "@layout/*": ["src/layouts/*"],
-      "@view/*": ["src/components/view/*"],
-      "@core/*": ["src/components/core/*"],
-      "@util/*": ["src/components/util/*"],
-      "@shared/*": ["src/components/shared/*"],
-      "@content/*": ["src/components/content/*"],
-      "@container/*": ["src/components/container/*"],
-    }
+      "@icon/*": [
+        "src/icons/*"
+      ],
+      "@layout/*": [
+        "src/layouts/*"
+      ],
+      "@view/*": [
+        "src/components/view/*"
+      ],
+      "@core/*": [
+        "src/components/core/*"
+      ],
+      "@util/*": [
+        "src/components/util/*"
+      ],
+      "@shared/*": [
+        "src/components/shared/*"
+      ],
+      "@content/*": [
+        "src/components/content/*"
+      ],
+      "@container/*": [
+        "src/components/container/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }
