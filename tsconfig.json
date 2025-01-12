@@ -7,6 +7,7 @@
     "paths": {
       "@icon/*": ["src/icons/*"],
       "@layout/*": ["src/layouts/*"],
+      "@view/*": ["src/components/view/*"],
       "@core/*": ["src/components/core/*"],
       "@util/*": ["src/components/util/*"],
       "@shared/*": ["src/components/shared/*"],
