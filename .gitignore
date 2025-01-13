@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# source videos and images
+public/
+
+# personal setting
+development.md
