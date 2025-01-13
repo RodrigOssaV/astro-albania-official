@@ -2,6 +2,7 @@
 import Header from "@container/Header.astro";
 import Footer from "@shared/Footer.astro";
 import Navbar from "@shared/Navbar.astro";
+import Compromise from "@view/Compromise.astro";
 import LocationMap from "@view/LocationMap.astro";
 import Numeros from "@view/Numeros.astro";
 
@@ -24,6 +25,7 @@ const { title } = Astro.props;
 	<body>
 		<Navbar />
 		<Header />
+		<Compromise />
 		<slot />
 		<Numeros />
 		<LocationMap />
