@@ -14,21 +14,20 @@ const accounts = enterprice.account;
 ---
 
 <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
-  <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex mb-2">
+  <div class="md:flex-auto mt-2 flex-row flex mb-2">
     {
       accounts.map((acc: any) => {
         const Icon = ICONS_SOCIAL_MEDIA[acc.icon];
 
         return (
-        <a 
-          href={`${acc.url}`} 
-          target="_blank"
-          rel="noopener noreferrer"
-          title={`${acc.title}`}
-          aria-label={`${acc.title}`}
-          class="w-6 mx-1">
-          <Icon class:list={["w-8 h-8"]}/>
-        </a>
+          <a 
+            href={`${acc.url}`} 
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`${acc.title}`}
+            aria-label={`${acc.title}`}>
+            <Icon class:list={["w-10 h-10 mr-3"]}/>
+          </a>
         )
       })
     }
