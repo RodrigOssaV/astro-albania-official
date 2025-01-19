@@ -3,6 +3,7 @@ export interface Enterprice {
   mail: string;
   phone: string;
   account: any;
+  headquarters: any;
 }
 
 export const enterprice: Enterprice = {
@@ -31,5 +32,12 @@ export const enterprice: Enterprice = {
       title: 'Página oficial Facebook de Albania Chile',
       icon: 'Facebook',
     }
-  ]
+  ],
+  headquarters: {
+    address: 'maipú',
+    number: 623,
+    city: 'concepción',
+    contry: 'chile',
+    complete: 'Maipú #623, Concepción. Chile'
+  }
 }
