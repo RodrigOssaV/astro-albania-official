@@ -10,33 +10,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@icon/*": [
-        "src/icons/*"
-      ],
-      "@layout/*": [
-        "src/layouts/*"
-      ],
-      "@view/*": [
-        "src/components/view/*"
-      ],
-      "@core/*": [
-        "src/components/core/*"
-      ],
-      "@util/*": [
-        "src/components/util/*"
-      ],
-      "@shared/*": [
-        "src/components/shared/*"
-      ],
-      "@content/*": [
-        "src/components/content/*"
-      ],
-      "@container/*": [
-        "src/components/container/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ]
+      "@icon/*": ["src/icons/*"], // ruta corta para importar a...
+      "@hooks/*": ["src/hooks/*"], // ruta corta para importar a...
+      "@layout/*": ["src/layouts/*"], // ruta corta para importar a...
+      "@constants/*": ["src/constants/*"], // ruta corta para importar a...
+      "@view/*": ["src/components/view/*"], // ruta corta para importar a...
+      "@core/*": ["src/components/core/*"], // ruta corta para importar a...
+      "@util/*": ["src/components/util/*"], // ruta corta para importar a...
+      "@shared/*": ["src/components/shared/*"], // ruta corta para importar a...
+      "@content/*": ["src/components/content/*"], // ruta corta para importar a...
+      "@container/*": ["src/components/container/*"], // ruta corta para importar a...
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
