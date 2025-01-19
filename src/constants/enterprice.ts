@@ -2,8 +2,7 @@ export interface Enterprice {
   name: string;
   mail: string;
   phone: string;
-  account?: any;
-
+  account: any;
 }
 
 export const enterprice: Enterprice = {

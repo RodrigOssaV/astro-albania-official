@@ -14,6 +14,7 @@ export interface Product {
   cover: string;
   coverCredits: string;
   category: ProductCategory;
+  options_products: any;
 }
 
 export const products: Product[] = [
@@ -28,6 +29,20 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/A7f7XRKgUWc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    options_products: [
+      {
+        id: 1,
+        cover: '/examples/example-1.webp',
+      },
+      {
+        id: 2,
+        cover: '/examples/example-2.webp',
+      },
+      {
+        id: 3,
+        cover: '/examples/example-3.webp',
+      },
+    ],
   },
   {
     id: 18,
@@ -40,6 +55,20 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/acn5ERAeSb4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    options_products: [
+      {
+        id: 1,
+        cover: '/examples/example-4.webp',
+      },
+      {
+        id: 2,
+        cover: '/examples/example-5.webp',
+      },
+      {
+        id: 3,
+        cover: '/examples/example-6.webp',
+      },
+    ],
   },
   {
     id: 21,
@@ -52,6 +81,20 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/Wr0TpKqf26s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    options_products: [
+      {
+        id: 1,
+        cover: '/examples/example-7.webp',
+      },
+      {
+        id: 2,
+        cover: '/examples/example-8.webp',
+      },
+      {
+        id: 3,
+        cover: '/examples/example-9.webp',
+      },
+    ],
   },
   {
     id: 17,
@@ -64,5 +107,19 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/Wr0TpKqf26s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    options_products: [
+      {
+        id: 1,
+        cover: '/examples/example-10.webp',
+      },
+      {
+        id: 2,
+        cover: '/examples/example-11.webp',
+      },
+      {
+        id: 3,
+        cover: '/examples/example-12.webp',
+      },
+    ],
   },
 ];
