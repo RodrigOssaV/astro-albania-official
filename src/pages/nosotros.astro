@@ -1,0 +1,108 @@
+---
+import Layout from "@layout/Layout.astro";
+---
+
+<Layout title="Albania Chile - Sobre nosotros.">
+  <div class="max-w-screen-xl mx-auto p-16">
+    <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
+      <h2 class="text-3xl font-extrabold text-gray-900">Sobre nosotros</h2>
+      <p class="mt-4 text-lg text-gray-500">
+        Comprometidos con la calidad y el éxito de tu negocio.
+      </p>
+    </div>
+
+    <section >
+      <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8" data-aos="fade-down">
+          <div class="max-w-lg">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              ¿Quiénes somos?
+            </h2>
+            <p class="mt-4 text-gray-600 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+              eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
+              magna quis elit efficitur consequat. Mauris eleifend velit a
+              pretium iaculis. Donec sagittis velit et magna euismod, vel
+              aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
+              arcu volutpat vel.
+            </p>
+          </div>
+          <div class="mt-12 md:mt-0">
+            <img
+              src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+              alt="About Us Image"
+              class="object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8" data-aos="fade-down">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div class="max-w-lg">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              ¿Por qué preferirnos?
+            </h2>
+            <p class="mt-4 text-gray-600 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+              eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
+              magna quis elit efficitur consequat. Mauris eleifend velit a
+              pretium iaculis. Donec sagittis velit et magna euismod, vel
+              aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
+              arcu volutpat vel.
+            </p>
+          </div>
+          <div class="mt-12 md:mt-0">
+            <img
+              src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+              alt="About Us Image"
+              class="object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
+        <h2 class="text-3xl font-extrabold text-gray-900">Galería</h2>
+        <p class="mt-4 text-lg text-gray-500">
+          Comprometidos con la calidad y el éxito de tu negocio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 max-w-6xl gap-8 mx-auto py-20" id="gallery" data-aos="zoom-in">
+        {
+          Array.from({ length: 9 }).map((_, i) => (
+            <a
+              class="group rounded-xl hover:scale-105 transition-all relative"
+              href={`/examples/example-${i + 1}.webp`}
+              target="_blank"
+              data-cropped='true'
+              data-pswp-width="800"
+              data-pswp-height="1020">
+              <img
+                class="rounded-xl"
+                loading="lazy"
+                src={`/examples/example-${i + 1}.webp`}
+                alt=""
+                class:list={["w-72 h-w-72 hover:scale-105"]}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import 'photoswipe/style.css';
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  });
+
+  lightbox.init();
+</script>
