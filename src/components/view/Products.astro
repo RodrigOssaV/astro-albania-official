@@ -4,14 +4,14 @@ import ProductContainer from "@container/ProductContainer.astro";
 ---
 
 <div class="max-w-screen-xl mx-auto p-16">
-  <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
+  <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
     <h2 class="text-3xl font-extrabold text-gray-900">Nuestros productos</h2>
     <p class="mt-4 text-lg text-gray-500">
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </p>
   </div>
 
-  <div class="sm:grid lg:grid-cols-4 sm:grid-cols-2 gap-10 mt-20">
+  <div class="sm:grid lg:grid-cols-4 sm:grid-cols-2 gap-10 mt-20" data-aos="zoom-in">
     {
       products.map((product) => <ProductContainer {product} />)
     }
