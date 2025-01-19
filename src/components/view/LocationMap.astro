@@ -1,4 +1,9 @@
-<section> <!--  class="bg-gray-100" -->
+---
+import { addresses } from "@constants/address";
+import { enterprice } from "@constants/enterprice";
+---
+
+<section>
   <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
     <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-extrabold text-gray-900">Visit Our Location</h2>
@@ -6,40 +11,177 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
     </div>
-    <div class="mt-16 lg:mt-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="rounded-lg overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.74613622348!2d-73.05483972342036!3d-36.824602778157995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5cfff7b6061%3A0x285ca39189f2766c!2zTWFpcMO6IDYyMywgNDAzMDQ5NyBDb25jZXBjacOzbiwgQsOtbyBCw61v!5e0!3m2!1ses-419!2scl!4v1736716962247!5m2!1ses-419!2scl"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div>
-          <div class="max-w-full mx-auto rounded-lg overflow-hidden">
-            <div class="px-6 py-4">
-              <h3 class="text-lg font-medium text-gray-900">Our Address</h3>
-              <p class="mt-1 text-gray-600">
-                123 Main St, San Francisco, CA 94105
-              </p>
-            </div>
-            <div class="border-t border-gray-200 px-6 py-4">
-              <h3 class="text-lg font-medium text-gray-900">Hours</h3>
-              <p class="mt-1 text-gray-600">Monday - Friday: 9am - 5pm</p>
-              <p class="mt-1 text-gray-600">Saturday: 10am - 4pm</p>
-              <p class="mt-1 text-gray-600">Sunday: Closed</p>
-            </div>
-            <div class="border-t border-gray-200 px-6 py-4">
-              <h3 class="text-lg font-medium text-gray-900">Contact</h3>
-              <p class="mt-1 text-gray-600">Email: info@example.com</p>
-              <p class="mt-1 text-gray-600">Phone: +1 23494 34993</p>
-            </div>
-          </div>
+
+    <div class="w-full mx-auto mt-20">
+      <div class="bg-blue-500 p-2 rounded-t-lg">
+        <div class="flex justify-center space-x-4" id="content-buttons">
+          {
+            addresses.map(({ name }) => (
+              <button class="px-4 py-2 text-white font-semibold border-b-4 border-blue-700 hover:bg-blue-700 focus:outline-none tab-button">
+                {name}
+              </button>
+            ))
+          }
         </div>
       </div>
+
+      {
+        addresses.map((ad) => (
+          <div>
+            {ad.id === 1 ? (
+              <div class="p-4 tab-content bg-white shadow-md rounded-lg">
+                <div class="mt-16 lg:mt-20">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="rounded-lg overflow-hidden">
+                      <iframe
+                        src={`${ad.google_map?.url}`}
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      />
+                    </div>
+                    <div>
+                      <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+                        <div class="px-6 py-4">
+                          <h3 class="text-lg font-medium text-gray-900">
+                            Our Address
+                          </h3>
+                          <p class="mt-1 text-gray-600">
+                            {ad.name} - #{ad.number},{" "}
+                            {ad.city}
+                          </p>
+                        </div>
+                        <div class="border-t border-gray-200 px-6 py-4">
+                          <h3 class="text-lg font-medium text-gray-900">
+                            Hours
+                          </h3>
+                          {
+                            ad.schedule_week && (
+                            <p class="mt-1 text-gray-600">
+                            {ad.schedule_week}: {ad.schedule_week_open} - {ad.schedule_week_close}
+                          </p>
+                            )
+                          }
+                          {
+                            ad.schedule_weekend && (
+                            <p class="mt-1 text-gray-600">
+                            {ad.schedule_weekend}: {ad.schedule_saturday_open} - {ad.schedule_saturday_closed}
+                          </p>
+                            )
+                          }
+                          <p class="mt-1 text-gray-600">Domingos: {ad.schedule_sunday}</p>
+                        </div>
+                        <div class="border-t border-gray-200 px-6 py-4">
+                          <h3 class="text-lg font-medium text-gray-900">
+                            Contact
+                          </h3>
+                          <p class="mt-1 text-gray-600">
+                            Correo: {enterprice.mail}
+                          </p>
+                          <p class="mt-1 text-gray-600">
+                            Teléfono: {enterprice.phone}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div  class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
+                <div class="mt-16 lg:mt-20">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="rounded-lg overflow-hidden">
+                      <iframe
+                        src={`${ad.google_map?.url}`}
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      />
+                    </div>
+                    <div>
+                      <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+                        <div class="px-6 py-4">
+                          <h3 class="text-lg font-medium text-gray-900">
+                            Our Address
+                          </h3>
+                          <p class="mt-1 text-gray-600">
+                            {ad.name} - #{ad.number},{" "}
+                            {ad.city}
+                          </p>
+                        </div>
+                        <div class="border-t border-gray-200 px-6 py-4">
+                          <h3 class="text-lg font-medium text-gray-900">
+                            Hours
+                          </h3>
+                          {
+                            ad.schedule_week && (
+                            <p class="mt-1 text-gray-600">
+                            {ad.schedule_week}: {ad.schedule_week_open} - {ad.schedule_week_close}
+                          </p>
+                            )
+                          }
+                          {
+                            ad.schedule_weekend && (
+                            <p class="mt-1 text-gray-600">
+                            {ad.schedule_weekend}: {ad.schedule_saturday_open} - {ad.schedule_saturday_closed}
+                          </p>
+                            )
+                          }
+                          <p class="mt-1 text-gray-600">Domingos: {ad.schedule_sunday}</p>
+                        </div>
+                        <div class="border-t border-gray-200 px-6 py-4">
+                          <h3 class="text-lg font-medium text-gray-900">
+                            Contact
+                          </h3>
+                          <p class="mt-1 text-gray-600">
+                            Correo electrónico: {enterprice.mail}
+                          </p>
+                          <p class="mt-1 text-gray-600">
+                            Teléfono: {enterprice.phone}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
+<style>
+  .tab-button.active {
+    background-color: #fff;
+    border-color: #4299e1;
+    color: #4299e1;
+  }
+</style>
+<script>
+  const buttons = document.querySelectorAll("#content-buttons .tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      // Ocultar todos los contenidos
+      contents.forEach((content) => content.classList.add("hidden"));
+
+      // Remover estilo activo de todos los botones
+      buttons.forEach((btn) => btn.classList.remove("bg-blue-700"));
+
+      // Mostrar el contenido correspondiente
+      contents[index].classList.remove("hidden");
+
+      // Añadir estilo activo al botón actual
+      button.classList.add("bg-blue-700");
+    });
+  });
+</script>
