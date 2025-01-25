@@ -42,6 +42,10 @@ export const products: Product[] = [
         id: 3,
         cover: '/examples/example-3.webp',
       },
+      {
+        id: 4,
+        cover: '/examples/example-3.webp',
+      },
     ],
   },
   {

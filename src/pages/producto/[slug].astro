@@ -18,7 +18,7 @@ const product = products.find((product) => product.slug === slug) as Product;
 ---
 
 <Layout title="Albania Chile - Tienda de ropa reciclada y reutilizada.">
-  <div class="max-w-4xl mx-auto mt-20" data-aos="fade-down">
+  <div class="max-w-7xl mx-auto mt-10 p-4" data-aos="fade-down">
 
     <div class="flex flex-col md:flex-row sm sm:gap-8">
       <div class="max-w-[450px] w-full h-full max-h-[450px]">
@@ -37,7 +37,7 @@ const product = products.find((product) => product.slug === slug) as Product;
           </h1>
           <div transition:name={`${slug} title`}></div>
           <p
-            class="max-w-sm py-4 text-lg"
+            class="text-justify text-pretty py-4 text-lg"
             transition:name={`${slug} description`}
           >
             {product.description}
@@ -50,14 +50,13 @@ const product = products.find((product) => product.slug === slug) as Product;
           <div class="text-xs text-gray-500">* This is a fictional price</div>
           <button
             type="button"
-            class="mt-4 px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full"
-            >Add to cart</button
-          >
+            class="mt-4 px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full">
+            Add to cart</button>
         </div>
       </article>
     </div>
 
-    <div class="py-6 md:py-10">
+    <div class="py-6 md:py-10 text-justify text-pretty">
       Step into a neon-lit realm where fashion meets the digital frontier. Our
       boutique is a portal to tomorrow's style, where code and couture collide.
       Unleash your inner tech fashionista with attire that bridges the gap
@@ -66,7 +65,7 @@ const product = products.find((product) => product.slug === slug) as Product;
 
     <h4 class="font-bold text-lg pb-6">Productos que podrían venir en los fardos</h4>
 
-    <div class="pswp-gallery grid grid-cols-3 gap-2 mb-10" id="my-gallery">
+    <div class="pswp-gallery flex flex-col mb-10 justify-center items-center md:flex-row gap-4" id="my-gallery">
       {
         product.options_products.map((op: any) => (
           <a
@@ -78,21 +77,21 @@ const product = products.find((product) => product.slug === slug) as Product;
             <img
               src={op.cover}
               alt=""
-              class:list={["w-72 h-w-72 hover:scale-105"]}
+              class:list={["w-72 h-w-72 hover:scale-105 rounded-xl"]}
             />
           </a>
         ))
       }
     </div>
     
-    <h4 class="font-bold text-lg pb-6">También te podría interesar</h4>
+    <!-- <h4 class="font-bold text-lg pb-6">También te podría interesar</h4>
     <div class="flex flex-wrap justify-center sm:justify-normal gap-4 mb-10">
       {
         products
           .filter((p) => p.category === product.category && p.id !== product.id)
           .map((pr) => <ProductContainer product={pr} />)
       }
-    </div>
+    </div> -->
 
   </div>
 </Layout>
