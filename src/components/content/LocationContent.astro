@@ -24,43 +24,48 @@ const { address } = Astro.props;
     <div>
       <div class="max-w-full mx-auto rounded-lg overflow-hidden">
         <div class="px-6 py-4">
-          <h3 class="text-lg font-medium text-gray-900">
+          <h3 class="text-lg font-bold text-chalet-green-600">
             Dirección
           </h3>
-          <p class="mt-1 text-gray-600">
+          <p class="mt-1 text-chalet-green-800">
             {address.name} - #{address.number},{" "}
             {address.city}
           </p>
         </div>
-        <div class="border-t border-gray-200 px-6 py-4">
-          <h3 class="text-lg font-medium text-gray-900">
+        <div class="border-t border-chalet-green-600 px-6 py-4">
+          <h3 class="text-lg font-bold text-chalet-green-600">
             Horarios
           </h3>
           {
             address.schedule_week && (
-            <p class="mt-1 text-gray-600">
-            {address.schedule_week}: {address.schedule_week_open} - {address.schedule_week_close}
-          </p>
+            <p class="mt-1 text-chalet-green-800">
+              <span class="text-chalet-green-900 font-bold">{address.schedule_week}:</span> 
+              {address.schedule_week_open} - {address.schedule_week_close}
+            </p>
             )
           }
           {
             address.schedule_weekend && (
-            <p class="mt-1 text-gray-600">
-            {address.schedule_weekend}: {address.schedule_saturday_open} - {address.schedule_saturday_closed}
-          </p>
+            <p class="mt-1 text-chalet-green-800">
+              <span class="text-chalet-green-900 font-bold">{address.schedule_weekend}:</span> 
+              {address.schedule_saturday_open} - {address.schedule_saturday_closed}
+            </p>
             )
           }
-          <p class="mt-1 text-gray-600">Domingos: {address.schedule_sunday}</p>
+          <p class="mt-1 text-chalet-green-800">
+            <span class="text-chalet-green-900 font-bold">Domingos:</span> 
+            {address.schedule_sunday}
+          </p>
         </div>
-        <div class="border-t border-gray-200 px-6 py-4">
-          <h3 class="text-lg font-medium text-gray-900">
+        <div class="border-t border-chalet-green-600 px-6 py-4">
+          <h3 class="text-lg font-bold text-chalet-green-600">
             Contacto
           </h3>
-          <p class="mt-1 text-gray-600">
-            Correo: {enterprice.mail}
+          <p class="mt-1 text-chalet-green-800">
+            <span class="text-chalet-green-900 font-bold">Correo:</span> {enterprice.mail}
           </p>
-          <p class="mt-1 text-gray-600">
-            Teléfono: {enterprice.phone}
+          <p class="mt-1 text-chalet-green-800">
+            <span class="text-chalet-green-900 font-bold">Teléfono:</span> {enterprice.phone}
           </p>
         </div>
       </div>

@@ -10,32 +10,32 @@ const transition_name = product.slug;
 ---
 
 <a href={`/producto/${product.slug}`} class="block">
-  <article class="group bg-flex flex-col shadow-sm rounded-lg overflow-hidden hover:shadow-xl hover:shadow-gray-100 transition-all">
-    <div class="sm:w-64 w-72 overflow-hidden">
+  <article class="group flex flex-col shadow-xl rounded-lg overflow-hidden
+      transition-all bg-chalet-green-500 p-2 justify-center hover:scale-105 hover:shadow-xl hover:bg-chalet-green-600">
+    <div class="overflow-hidden p-1">
       <img
         src={product.cover}
         alt={product.name}
         transition:name={`${transition_name} image`}
-        class="object-cover object-center w-full grayscale-[0.1] group-hover:grayscale-0 h-full rounded-md group-hover:scale-105 transition-all"
+        class="object-cover object-center w-full grayscale-[0.1] group-hover:grayscale-0 h-full rounded-md"
       />
     </div>
-    <div class="p-6">
+    <div class="bg-chalet-green-200 p-4 rounded-xl">
       <h3
-        class="font-semibold truncate"
+        class="font-bold text-pretty text-chalet-green-700"
         transition:name={`${transition_name} title`}
       >
-        {product.name}
+        {product.title}
       </h3>
       <p
         class="text-gray-600 text-sm truncate"
         transition:name={`${transition_name} description`}
       >
-        {product.description}
+        {product.name}
       </p>
       <div class="text-right mt-4" transition:name={`${transition_name} price`}>
-        <span class="font-semibold">${product.price}</span>
+        <span class="font-bold text-chalet-green-900">${product.price}</span>
       </div>
     </div>
   </article>
 </a>
-<!-- group bg-flex flex-col sm:w-64 w-1/4 bg-white shadow-sm rounded-lg overflow-hidden hover:shadow-xl hover:shadow-gray-100 transition-all -->

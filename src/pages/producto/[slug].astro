@@ -18,14 +18,13 @@ const product = products.find((product) => product.slug === slug) as Product;
 ---
 
 <Layout title="Albania Chile - Tienda de ropa reciclada y reutilizada.">
-  <div class="max-w-7xl mx-auto mt-10 p-4" data-aos="fade-down">
-
-    <div class="flex flex-col md:flex-row sm sm:gap-8">
+  <div class="max-w-7xl mx-auto mt-20 md:mt-40 p-4">
+    <div class="flex flex-col md:flex-row sm sm:gap-8 bg-chalet-green-500 rounded-xl p-2 mb-8" data-aos="fade-down">
       <div class="max-w-[450px] w-full h-full max-h-[450px]">
         <img
           src={product.cover}
           alt={product.name}
-          class="w-full h-full object-cover rounded-xl shadow-2xl shadow-gray-200 border-b"
+          class="w-full h-full object-cover rounded-xl shadow-2xl border-b"
           transition:name={`${slug} image`}
         />
       </div>
@@ -36,10 +35,7 @@ const product = products.find((product) => product.slug === slug) as Product;
             {product.name}
           </h1>
           <div transition:name={`${slug} title`}></div>
-          <p
-            class="text-justify text-pretty py-4 text-lg"
-            transition:name={`${slug} description`}
-          >
+          <p class="text-justify text-pretty py-4 text-lg" transition:name={`${slug} description`}>
             {product.description}
           </p>
         </div>
@@ -48,42 +44,107 @@ const product = products.find((product) => product.slug === slug) as Product;
             ${product.price}
           </div>
           <div class="text-xs text-gray-500">* This is a fictional price</div>
-          <button
-            type="button"
-            class="mt-4 px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full">
-            Add to cart</button>
+          <button type="button" class="mt-4 px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full">
+            Add to cart
+          </button>
         </div>
       </article>
     </div>
 
-    <div class="py-6 md:py-10 text-justify text-pretty">
-      Step into a neon-lit realm where fashion meets the digital frontier. Our
-      boutique is a portal to tomorrow's style, where code and couture collide.
-      Unleash your inner tech fashionista with attire that bridges the gap
-      between reality and the virtual cosmos.
+    <div class="bg-chalet-green-200 p-4 rounded-xl mb-8 flex flex-col" data-aos="fade-down">
+      <div class="text-justify text-pretty">
+        Fardo Ropa Clásica Americana 25K, Variedad y Estilo en Cada Prenda. Fardo
+        mixto con una selección de prendas clásicas de estilo americano, que
+        pueden incluir chaquetas, suéteres, camisas, jeans, pantalones, polos y
+        más, en diversas tallas y estilos. Cada fardo contiene una combinación
+        única de prendas que reflejan la esencia del vestuario clásico americano,
+        ideal para todas las temporadas. Algunas prendas pueden presentar detalles
+        o fallas menores. Producto perfecto para quienes buscan iniciar su propio
+        negocio o abastecer tiendas de ropa usada, reciclada, alternativa o
+        vintage.
+      </div>
+
+      <div class="rounded-lg overflow-hidden mx-auto mt-10" data-aos="fade-down">
+
+        <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10 hidden md:block">
+          <table class="w-full table-fixed text-center">
+              <thead class="bg-chalet-green-100">
+                  <tr>
+                      <th class="w-1/4 py-4 px-6 text-chalet-green-900 font-bold uppercase">Temporada</th>
+                      <th class="w-1/4 py-4 px-6 text-chalet-green-900 font-bold uppercase">Calidad</th>
+                      <th class="w-1/4 py-4 px-6 text-chalet-green-900 font-bold uppercase">Unidades</th>
+                      <th class="w-1/4 py-4 px-6 text-chalet-green-900 font-bold uppercase">Formato</th>
+                      <th class="w-1/4 py-4 px-6 text-chalet-green-900 font-bold uppercase">Origen</th>
+                  </tr>
+              </thead>
+              <tbody class="bg-chalet-green-300">
+                  <tr>
+                      <td class="py-4 px-6">Invierno</td>
+                      <td class="py-4 px-6 truncate">Premium</td>
+                      <td class="py-4 px-6">70 aprox.</td>
+                      <td class="py-4 px-6">Fardo 25K</td>
+                      <td class="py-4 px-6">Europeo</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <table class="w-full text-xl md:hidden rounded-xl bg-chalet-green-500 p-2">
+          <thead class="bg-chalet-green-100">
+            <tr>
+              <th class="py-3 px-4 text-center font-bold text-chalet-green-900" colspan="2">Ficha técnica</th>
+            </tr>
+          </thead>
+          <tbody class="bg-chalet-green-300">
+            <tr>
+              <td class="py-3 px-4 text-left font-semibold text-chalet-green-900">Temporada</td>
+              <td class="py-3 px-4 text-left">invierno</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-left font-semibold text-chalet-green-900">Calidad</td>
+              <td class="py-3 px-4 text-left">premium</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-left font-semibold text-chalet-green-900">Unidades</td>
+              <td class="py-3 px-4 text-left">70 aprox.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-left font-semibold text-chalet-green-900">Formato</td>
+              <td class="py-3 px-4 text-left">Fardo 25K</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-left font-semibold text-chalet-green-900">Origen</td>
+              <td class="py-3 px-4 text-left">europeo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <h4 class="font-bold text-lg pb-6">Productos que podrían venir en los fardos</h4>
+    <div class="bg-chalet-green-500 rounded-xl p-2" data-aos="fade-down">
+      <h4 class="font-bold text-xl pb-6 text-center p-4 uppercase text-chalet-green-900">
+        Productos que podrían venir en los fardos
+      </h4>
 
-    <div class="pswp-gallery flex flex-col mb-10 justify-center items-center md:flex-row gap-4" id="my-gallery">
-      {
-        product.options_products.map((op: any) => (
-          <a
-            href={op.cover}
-            data-pswp-width="800"
-            data-pswp-height="1020"
-            target="_blank"
-          >
-            <img
-              src={op.cover}
-              alt=""
-              class:list={["w-72 h-w-72 hover:scale-105 rounded-xl"]}
-            />
-          </a>
-        ))
-      }
+      <div class="pswp-gallery flex flex-col mb-10 justify-center items-center md:flex-row gap-4" id="my-gallery">
+        {
+          product.options_products.map((op: any) => (
+            <a
+              href={op.cover}
+              data-pswp-width="800"
+              data-pswp-height="1020"
+              target="_blank">
+              <img
+                src={op.cover}
+                alt=""
+                class:list={["w-72 h-w-72 hover:scale-105 rounded-xl"]}
+              />
+            </a>
+          ))
+        }
+      </div>
     </div>
-    
+
     <!-- <h4 class="font-bold text-lg pb-6">También te podría interesar</h4>
     <div class="flex flex-wrap justify-center sm:justify-normal gap-4 mb-10">
       {
@@ -92,13 +153,12 @@ const product = products.find((product) => product.slug === slug) as Product;
           .map((pr) => <ProductContainer product={pr} />)
       }
     </div> -->
-
   </div>
 </Layout>
 
 <script>
   import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import 'photoswipe/style.css';
+  import "photoswipe/style.css";
 
   const lightbox = new PhotoSwipeLightbox({
     gallery: "#my-gallery",
