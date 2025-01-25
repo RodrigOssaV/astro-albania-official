@@ -7,6 +7,7 @@ export enum ProductCategory {
 export interface Product {
   id: number;
   name: string;
+  title: string;
   slug: string;
   price: number;
   description: string;
@@ -20,7 +21,8 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 32,
-    name: "fardo ropa clásica americana",
+    title: 'Clásica Américana',
+    name: "Fardo de ropa clásica américana.",
     slug: "clasica-americana-fardo",
     price: 25000,
     description: 'fardo de ropa clásica americana, ideal para quienes buscan prendas únicas y atemporales.',
@@ -50,7 +52,8 @@ export const products: Product[] = [
   },
   {
     id: 18,
-    name: "fardo ropa clásica italiana",
+    title: 'Clásica Italiana',
+    name: "Fardo de ropa clásica italiana.",
     slug: "clasica-italiana-fardo",
     price: 26000,
     description: 'Fardo de ropa clásica italiana, perfecto para quienes aprecian la elegancia y el estilo atemporal.',
@@ -76,7 +79,8 @@ export const products: Product[] = [
   },
   {
     id: 21,
-    name: "fardo ropa tradicional ecológica",
+    title: 'Tradicional Ecológica',
+    name: "Fardo de ropa tradicional ecológica.",
     slug: "tradicional-ecologica-fardo",
     price: 18000,
     description: 'Fardo de ropa tradicional ecológica, ideal para quienes buscan un estilo auténtico y sostenible.',
@@ -102,7 +106,8 @@ export const products: Product[] = [
   },
   {
     id: 17,
-    name: "fardo ropa tradicional",
+    title: 'Tradicional',
+    name: "Fardo de ropa tradicional.",
     slug: "tradicional-fardo",
     price: 20000,
     description: 'Fardo de ropa tradicional, perfecto para quienes valoran prendas con estilo auténtico y atemporal',
