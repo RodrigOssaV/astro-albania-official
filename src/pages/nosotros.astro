@@ -1,14 +1,12 @@
 ---
+import SectionTitle from "@container/SectionTitle.astro";
 import Layout from "@layout/Layout.astro";
 ---
 
 <Layout title="Albania Chile - Sobre nosotros.">
   <div class="max-w-screen-xl mx-auto p-16">
     <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
-      <h2 class="text-3xl font-extrabold text-gray-900">Sobre nosotros</h2>
-      <p class="mt-4 text-lg text-gray-500">
-        Comprometidos con la calidad y el éxito de tu negocio.
-      </p>
+      <SectionTitle title="Sobre nosotros" description="Comprometidos con la calidad y el éxito de tu negocio." />
     </div>
 
     <section >
@@ -63,10 +61,7 @@ import Layout from "@layout/Layout.astro";
       </div>
 
       <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
-        <h2 class="text-3xl font-extrabold text-gray-900">Galería</h2>
-        <p class="mt-4 text-lg text-gray-500">
-          Comprometidos con la calidad y el éxito de tu negocio.
-        </p>
+        <SectionTitle title="Galería" description="Algunos de nuestros productos." />
       </div>
 
       <div class="grid grid-cols-3 max-w-6xl gap-8 mx-auto py-20" id="gallery" data-aos="zoom-in">

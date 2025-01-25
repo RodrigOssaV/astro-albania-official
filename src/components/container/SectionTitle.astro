@@ -1,0 +1,27 @@
+---
+import Typography from '@core/Typography.astro';
+
+
+interface Props {
+  title: string;
+  description: string;
+  variant?: keyof typeof variantSizes
+}
+
+const { title, description, variant = 'standar' } = Astro.props;
+
+const variantSizes = {
+  small: "mx-auto max-w-[250px] text-wrap",
+  standar: ''
+}
+
+const classSize = variantSizes[variant];
+---
+
+<Typography as="h3" variant="h3" color="black" class:list={"text-center"}>
+  {title}
+</Typography>
+
+<Typography as="h2" variant="body" color="black" class:list={`mt-2 text-center text-prettier mb-10`}>
+  {description}
+</Typography>
