@@ -4,89 +4,275 @@ import Layout from "@layout/Layout.astro";
 ---
 
 <Layout title="Albania Chile - Sobre nosotros.">
-  <div class="max-w-screen-xl mx-auto p-16">
-    <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
-      <SectionTitle title="Sobre nosotros" description="Comprometidos con la calidad y el éxito de tu negocio." />
+  <header class="md:max-w-7xl max-w-4xl mx-auto mt-40 mb-20" data-aos="fade-down">
+    <SectionTitle title="Sobre nosotros" description="Comprometidos con la calidad y el éxito de tu negocio." />
+  </header>
+  <section>
+    <div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div class="max-w-lg">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            ¿Quiénes somos?
+          </h2>
+          <p class="mt-4 text-gray-600 text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+            eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
+            magna quis elit efficitur consequat. Mauris eleifend velit a
+            pretium iaculis. Donec sagittis velit et magna euismod, vel
+            aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
+            arcu volutpat vel.
+          </p>
+        </div>
+        <div class="mt-12 md:mt-0">
+          <img
+            src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+            alt="About Us Image"
+            class="object-cover rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div class="max-w-lg">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            ¿Por qué preferirnos?
+          </h2>
+          <p class="mt-4 text-gray-600 text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+            eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
+            magna quis elit efficitur consequat. Mauris eleifend velit a
+            pretium iaculis. Donec sagittis velit et magna euismod, vel
+            aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
+            arcu volutpat vel.
+          </p>
+        </div>
+        <div class="mt-12 md:mt-0">
+          <img
+            src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+            alt="About Us Image"
+            class="object-cover rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="bg-chalet-green-100">
+      <div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
+        <SectionTitle title="Galería" description="Algunos de nuestros productos." />
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mx-auto " id="gallery" data-aos="zoom-in">
+          {
+            Array.from({ length: 9 }).map((_, i) => (
+              <a
+                class="group rounded-xl hover:scale-105 transition-all relative"
+                href={`/examples/example-${i + 1}.webp`}
+                target="_blank"
+                data-cropped='true'
+                data-pswp-width="800"
+                data-pswp-height="1020">
+                <img
+                  class="rounded-xl"
+                  loading="lazy"
+                  src={`/examples/example-${i + 1}.webp`}
+                  alt=""
+                  class:list={["w-72 h-w-72 hover:scale-105"]}
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
     </div>
 
-    <section >
-      <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8" data-aos="fade-down">
-          <div class="max-w-lg">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              ¿Quiénes somos?
-            </h2>
-            <p class="mt-4 text-gray-600 text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-              eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
-              magna quis elit efficitur consequat. Mauris eleifend velit a
-              pretium iaculis. Donec sagittis velit et magna euismod, vel
-              aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
-              arcu volutpat vel.
-            </p>
-          </div>
-          <div class="mt-12 md:mt-0">
+    <div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
+      <SectionTitle title="Reviews" description="Algunos comentarios de nuestros clientes" />
+
+      <div class="gap-8 space-y-8 md:columns-2 lg:columns-3">
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
+        >
+          <div class="flex gap-4 items-start">
             <img
-              src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
-              alt="About Us Image"
-              class="object-cover rounded-lg shadow-md"
+              class="w-12 h-12 rounded-full"
+              src="https://randomuser.me/api/portraits/men/12.jpg"
+              alt="user avatar"
+              width="400"
+              height="400"
+              loading="lazy"
             />
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Ravi Kumar</h6>
+                <p class="text-sm text-gray-500">Car Enthusiast</p>
+              </div>
+              <a
+                href="https://twitter.com/ravikumar/status/1234567890"
+                class="text-blue-500 hover:text-blue-600 ml-4"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
           </div>
+          <p class="mt-8">
+            The quality of these seat covers is outstanding. They fit perfectly
+            and add a touch of luxury to my car's interior. Highly recommend!
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
+        >
+          <div class="flex gap-4 items-start">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="https://randomuser.me/api/portraits/women/14.jpg"
+              alt="user avatar"
+              width="200"
+              height="200"
+              loading="lazy"
+            />
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Anjali Sharma</h6>
+                <p class="text-sm text-gray-500">Marketing Professional</p>
+              </div>
+              <a
+                href="https://www.instagram.com/p/1234567890"
+                class="text-blue-500 hover:text-blue-600 ml-4"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">
+            I love the customizable designs! I was able to choose the perfect
+            color to match my car's interior. The material feels very durable.
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
+        >
+          <div class="flex gap-4 items-start">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="https://randomuser.me/api/portraits/men/18.jpg"
+              alt="user avatar"
+              width="200"
+              height="200"
+              loading="lazy"
+            />
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Vijay Singh</h6>
+                <p class="text-sm text-gray-500">Software Developer</p>
+              </div>
+              <a
+                href="https://www.facebook.com/vijaysingh/posts/1234567890"
+                class="text-blue-500 hover:text-blue-600 ml-4"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">
+            These seat covers are a game-changer for long drives. The added
+            padding and ergonomic design make a huge difference in comfort.
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
+        >
+          <div class="flex gap-4 items-start">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="https://randomuser.me/api/portraits/women/2.jpg"
+              alt="user avatar"
+              width="200"
+              height="200"
+              loading="lazy"
+            />
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Priya Patel</h6>
+                <p class="text-sm text-gray-500">Mobile Developer</p>
+              </div>
+              <a
+                href="https://twitter.com/priyapatel/status/1234567890"
+                class="text-blue-500 hover:text-blue-600 ml-4"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">
+            The installation was super easy, and the instructions were clear. My
+            car looks and feels much more upscale now.
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
+        >
+          <div class="flex gap-4 items-start">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="https://randomuser.me/api/portraits/men/62.jpg"
+              alt="user avatar"
+              width="200"
+              height="200"
+              loading="lazy"
+            />
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Arjun Mehta</h6>
+                <p class="text-sm text-gray-500">Manager</p>
+              </div>
+              <a
+                href="https://www.instagram.com/p/1234567890"
+                class="text-blue-500 hover:text-blue-600 ml-4"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">
+            Great value for money. The seat covers have a premium feel and have
+            significantly improved the look of my car's interior.
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
+        >
+          <div class="flex gap-4 items-start">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="https://randomuser.me/api/portraits/women/19.jpg"
+              alt="user avatar"
+              width="400"
+              height="400"
+              loading="lazy"
+            />
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Sneha Rao</h6>
+                <p class="text-sm text-gray-500">Product Designer</p>
+              </div>
+              <a
+                href="https://www.facebook.com/sneharao/posts/1234567890"
+                class="text-blue-500 hover:text-blue-600 ml-4"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">
+            Absolutely love these seat covers. They're stylish, comfortable, and
+            were really easy to install. My car interior looks brand new!
+          </p>
         </div>
       </div>
-
-      <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8" data-aos="fade-down">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-          <div class="max-w-lg">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              ¿Por qué preferirnos?
-            </h2>
-            <p class="mt-4 text-gray-600 text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-              eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
-              magna quis elit efficitur consequat. Mauris eleifend velit a
-              pretium iaculis. Donec sagittis velit et magna euismod, vel
-              aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
-              arcu volutpat vel.
-            </p>
-          </div>
-          <div class="mt-12 md:mt-0">
-            <img
-              src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
-              alt="About Us Image"
-              class="object-cover rounded-lg shadow-md"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="max-w-2xl lg:max-w-4xl mx-auto text-center" data-aos="fade-down">
-        <SectionTitle title="Galería" description="Algunos de nuestros productos." />
-      </div>
-
-      <div class="grid grid-cols-3 max-w-6xl gap-8 mx-auto py-20" id="gallery" data-aos="zoom-in">
-        {
-          Array.from({ length: 9 }).map((_, i) => (
-            <a
-              class="group rounded-xl hover:scale-105 transition-all relative"
-              href={`/examples/example-${i + 1}.webp`}
-              target="_blank"
-              data-cropped='true'
-              data-pswp-width="800"
-              data-pswp-height="1020">
-              <img
-                class="rounded-xl"
-                loading="lazy"
-                src={`/examples/example-${i + 1}.webp`}
-                alt=""
-                class:list={["w-72 h-w-72 hover:scale-105"]}
-              />
-            </a>
-          ))
-        }
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </Layout>
 
 <script>

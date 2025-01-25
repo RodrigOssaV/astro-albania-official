@@ -1,8 +1,17 @@
 ---
+import SectionTitle from '@container/SectionTitle.astro';
 import ContactContent from '@content/ContactContent.astro';
 import Layout from '@layout/Layout.astro';
 ---
 
 <Layout title='Albania Chile - Tienda de ropa reciclada y reutilizada.'>
+  <div class="max-w-7xl mx-auto mt-40 p-4">
+    <div data-aos="fade-down">
+      <SectionTitle 
+          title="Contáctanos" 
+          description="Ponte en contacto con nosotros para resolver tus dudas, recibir asesoramiento o más información sobre nuestros productos." 
+        />
+    </div>
+  </div>
   <ContactContent />
 </Layout>
