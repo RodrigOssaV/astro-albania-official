@@ -1,7 +1,7 @@
 ---
 import { addresses } from "@constants/address";
 import SectionTitle from "@container/SectionTitle.astro";
-import LocationContent from "@content/LocationContent.astro";
+import Location from "@content/Location.astro";
 import Layout from "@layout/Layout.astro";
 ---
 
@@ -28,11 +28,11 @@ import Layout from "@layout/Layout.astro";
           <div>
             {ad.id === 1 ? (
               <div class="p-4 tab-content bg-chalet-green-200 shadow-md rounded-lg">
-                <LocationContent address={ad}/>
+                <Location address={ad}/>
               </div>
             ) : (
               <div  class="p-4 tab-content bg-chalet-green-200 shadow-md rounded-lg hidden">
-                <LocationContent address={ad}/>
+                <Location address={ad}/>
               </div>
             )}
           </div>
