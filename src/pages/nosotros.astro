@@ -1,5 +1,6 @@
 ---
 import SectionTitle from "@container/SectionTitle.astro";
+import Galeria from "@content/Galeria.astro";
 import Layout from "@layout/Layout.astro";
 ---
 
@@ -8,9 +9,10 @@ import Layout from "@layout/Layout.astro";
     <SectionTitle title="Sobre nosotros" description="Comprometidos con la calidad y el éxito de tu negocio." />
   </header>
   <section>
-    <div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        <div class="max-w-lg">
+    <div class="max-w-7xl mx-auto" data-aos="fade-down">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 w-full p-8 md:p-16">
+        <div class="max-w-6xl">
           <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             ¿Quiénes somos?
           </h2>
@@ -31,10 +33,11 @@ import Layout from "@layout/Layout.astro";
           />
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        <div class="max-w-lg">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 w-full p-8 md:p-16">
+        <div class="max-w-6xl">
           <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            ¿Por qué preferirnos?
+            ¿Quiénes somos?
           </h2>
           <p class="mt-4 text-gray-600 text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
@@ -54,31 +57,9 @@ import Layout from "@layout/Layout.astro";
         </div>
       </div>
     </div>
+
     <div class="bg-chalet-green-100">
-      <div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
-        <SectionTitle title="Galería" description="Algunos de nuestros productos." />
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mx-auto " id="gallery" data-aos="zoom-in">
-          {
-            Array.from({ length: 9 }).map((_, i) => (
-              <a
-                class="group rounded-xl hover:scale-105 transition-all relative"
-                href={`/examples/example-${i + 1}.webp`}
-                target="_blank"
-                data-cropped='true'
-                data-pswp-width="800"
-                data-pswp-height="1020">
-                <img
-                  class="rounded-xl"
-                  loading="lazy"
-                  src={`/examples/example-${i + 1}.webp`}
-                  alt=""
-                  class:list={["w-72 h-w-72 hover:scale-105"]}
-                />
-              </a>
-            ))
-          }
-        </div>
-      </div>
+      <Galeria />
     </div>
 
     <div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
@@ -274,16 +255,3 @@ import Layout from "@layout/Layout.astro";
     </div>
   </section>
 </Layout>
-
-<script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import 'photoswipe/style.css';
-
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#gallery",
-    children: "a",
-    pswpModule: () => import("photoswipe"),
-  });
-
-  lightbox.init();
-</script>
