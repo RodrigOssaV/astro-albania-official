@@ -1,0 +1,19 @@
+---
+import { reviews } from "@constants/review";
+import ReviewCard from "@container/ReviewCard.astro";
+import SectionTitle from "@container/SectionTitle.astro";
+---
+
+<div class="max-w-7xl mx-auto p-8 md:p-16" data-aos="fade-down">
+  <SectionTitle
+    title="Reviews"
+    description="Algunos comentarios de nuestros clientes"
+  />
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+    {
+      reviews.map(({name_person, img_profile, comment, social_media}) => (
+        <ReviewCard {name_person} {img_profile} {comment} {social_media} />
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  name_person: string;
+  img_profile: string;
+  comment: string;
+  social_media: string;
+}
+
+const {name_person, img_profile, comment, social_media} = Astro.props;
+---
+<div class="p-6 bg-chalet-green-500 rounded-xl" data-aos="flip-left">
+  <div class="flex gap-4 items-start">
+    <img
+      class="w-16 h-16 rounded-full"
+      src={img_profile}
+      alt="user avatar"
+      width="400"
+      height="400"
+      loading="lazy"
+    />
+    <div class="flex-1 flex justify-between items-start">
+      <div>
+        <h6 class="font-bold text-xl text-center text-chalet-green-200 mt-2 uppercase">{name_person}</h6>
+        <p class="text-sm text-chalet-green-50">{social_media}</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-pretty text-justify mt-4 text-chalet-green-100">
+    {comment}
+  </p>
+</div>
