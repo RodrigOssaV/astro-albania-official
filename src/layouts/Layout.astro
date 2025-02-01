@@ -55,6 +55,34 @@ const { title } = Astro.props;
 			backdrop-filter: blur(10px);
 		}
 	}
+
+	@supports selector(::-webkit-scrollbar) {
+		@media (hover: hover) {
+			::-webkit-scrollbar {
+				width: 15px;
+				border-radius: 15px;
+			}
+
+			::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				background-color: #f6f8ed;
+				background-color: #637d33;
+				background-clip: content-box;
+			}
+
+			::-webkit-scrollbar-thumb:active {
+				background-color: #9eb962;
+			}
+
+			::-webkit-scrollbar-track {
+				background: #f6f8ed;
+			}
+
+			::-webkit-scrollbar-corner {
+				background: #f6f8ed;
+			}
+		}
+	}
 </style>
 <script>
   import AOS from 'aos';
