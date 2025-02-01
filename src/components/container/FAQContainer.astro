@@ -1,0 +1,29 @@
+---
+import RowDown from '@icons/RowDown.astro';
+
+interface Props {
+  question: string;
+  answer?: string;
+}
+
+const { question, answer } = Astro.props;
+---
+<div class="py-5 bg-chalet-green-600 rounded-xl p-4 mb-1">
+  <details class="group">
+    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+      <span class="text-chalet-green-100">{question}</span>
+      <span class="transition group-open:rotate-180">
+        <RowDown class:list={"text-chalet-green-200"}/>
+      </span>
+    </summary>
+    <p class="group-open:animate-fadeIn mt-3 text-chalet-green-100/70">
+      Lorem ipsum dolor sit amet consectetur adipiscing elit nec pellentesque, 
+      lacus elementum purus mi ridiculus vulputate fringilla viverra a, 
+      nisl eu primis fusce turpis magnis faucibus id. Fermentum fames parturient pharetra placerat ante nibh, 
+      duis vehicula curae dis feugiat volutpat, cursus torquent arcu felis ad. 
+      Metus vestibulum nec montes morbi praesent non tempor suscipit taciti augue, 
+      parturient fames neque vivamus nulla purus tellus quis bibendum, 
+      molestie nam libero in class ante porta faucibus aliquet.
+    </p>
+  </details>
+</div>
