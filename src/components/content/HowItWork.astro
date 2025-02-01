@@ -3,22 +3,34 @@ import WorkContainer from "@container/WorkContainer.astro";
 
 ---
 
-<div class="max-w-7xl mx-auto p-16" data-aos="fade-down">
+<div class="max-w-7xl mx-auto p-8" data-aos="fade-down">
   <div class="p-6 bg-chalet-green-500 rounded-xl">
     <div class="text-center">
-      <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+      <h2 class="mt-6 text-3xl font-semibold tracking-tight text-chalet-green-300 sm:text-4xl lg:text-5xl">
         Compra en 4 simples pasos
       </h2>
-      <p class="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
+      <p class="mx-auto mt-4 max-w-2xl text-lg font-normal text-chalet-green-200 lg:text-xl lg:leading-8">
         Adquiere tus productos favoritos de manera fácil y rápida en solo 4 simples pasos.
       </p>
     </div>
     <div class="md:p-8">
       <ul class="mx-auto mt-12 grid grid-cols-1 gap-10 lg:grid-cols-4">
-        <WorkContainer title="Explora y elige" description="Navega por nuestra tienda y selecciona los productos que deseas comprar." />
-        <WorkContainer title="Agrega al carrito" description="Revisa los detalles y añade los artículos a tu carrito de compras." />
-        <WorkContainer title="Confirma tu compra" description="Contáctanos por WhatsApp para coordinar tu pedido con nuestras vendedoras." />
-        <WorkContainer title="Recibe tu pedido" description="Retira tu compra en nuestras tiendas o elige el despacho a domicilio." />
+        <WorkContainer 
+          title="Explora y elige" 
+          description="Navega por nuestra tienda y selecciona los productos que deseas comprar." 
+          hasLine={true}/>
+        <WorkContainer 
+          title="Agrega al carrito" 
+          description="Revisa los detalles y añade los artículos a tu carrito de compras." 
+          hasLine={true}/>
+        <WorkContainer 
+          title="Confirma tu compra" 
+          description="Contáctanos por WhatsApp para coordinar tu pedido con nuestras vendedoras." 
+          hasLine={true}/>
+        <WorkContainer 
+          title="Recibe tu pedido" 
+          description="Retira tu compra en nuestras tiendas o elige el despacho a domicilio." 
+          hasLine={false}/>
       </ul>
     </div>
   </div>
