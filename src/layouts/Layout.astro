@@ -1,14 +1,15 @@
 ---
-import Footer from "@shared/Footer.astro";
-import Navbar from "@shared/Navbar.astro";
 import '@fontsource-variable/sora';
 import ButtonUp from "@shared/ButtonUp.astro";
+import Footer from "@shared/Footer.astro";
+import Navbar from "@shared/Navbar.astro";
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+export const prerender = true;
 ---
 
 <!doctype html>
@@ -60,11 +61,11 @@ const { title } = Astro.props;
 		@media (hover: hover) {
 			::-webkit-scrollbar {
 				width: 15px;
-				border-radius: 15px;
+				/* border-radius: 15px; */
 			}
 
 			::-webkit-scrollbar-thumb {
-				border-radius: 10px;
+				/* border-radius: 10px; */
 				background-color: #f6f8ed;
 				background-color: #637d33;
 				background-clip: content-box;
@@ -86,8 +87,8 @@ const { title } = Astro.props;
 </style>
 <script>
   import AOS from 'aos';
-	import 'aos/dist/aos.css'; // You can also use <link> for styles
-	// ..
+	import 'aos/dist/aos.css';
+
 	AOS.init({
 		duration: 1200,
 	});
