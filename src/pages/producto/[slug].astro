@@ -1,7 +1,7 @@
 ---
 import Layout from "@layout/Layout.astro";
 import { type Product, products } from "@constants/product";
-import ProductContainer from "@container/ProductContainer.astro";
+import ButtonShopping from "@util/ButtonShopping";
 const { slug } = Astro.params;
 
 export function getStaticPaths() {
@@ -44,9 +44,7 @@ const product = products.find((product) => product.slug === slug) as Product;
             ${product.price}
           </div>
           <div class="text-xs text-gray-500">* This is a fictional price</div>
-          <button type="button" class="mt-4 px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full">
-            Add to cart
-          </button>
+          <ButtonShopping client:load product={product} />
         </div>
       </article>
     </div>
