@@ -1,10 +1,11 @@
 import { products } from "@constants/product";
+import { formatCurrency } from "@hooks/formatCurrency";
 
 export default function ShoppingCartItem({item}) {
 
   const product = products.find((product) => product.id === item.id);
   // console.log('product: ', product);
-  // console.log('item: ', item);
+  console.log('item: ', item);
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function ShoppingCartItem({item}) {
               Remove
             </p>
           </div>
-          <p class="text-base font-black leading-none text-gray-800">${product.price}</p>
+          <p class="text-lg font-black leading-none text-gray-800">{formatCurrency(product.price)}<span class="text-sm"> x{item.quantity}</span></p>
         </div>
       </div>
     </>

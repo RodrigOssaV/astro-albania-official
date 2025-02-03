@@ -1,6 +1,7 @@
 ---
-import Layout from "@layout/Layout.astro";
 import { type Product, products } from "@constants/product";
+import { formatCurrency } from "@hooks/formatCurrency";
+import Layout from "@layout/Layout.astro";
 import ButtonShopping from "@util/ButtonShopping";
 const { slug } = Astro.params;
 
@@ -41,7 +42,7 @@ const product = products.find((product) => product.slug === slug) as Product;
         </div>
         <div class="pt-2 sm:pt-8 text-right">
           <div class="text-4xl font-semibold" transition:name={`${slug} price`}>
-            ${product.price}
+            {formatCurrency(product.price)}
           </div>
           <div class="text-xs text-gray-500">* This is a fictional price</div>
           <ButtonShopping client:load product={product} />

@@ -1,5 +1,6 @@
 ---
 import { type Product } from "@constants/product";
+import { formatCurrency } from "@hooks/formatCurrency";
 
 interface Props {
   product: Product
@@ -34,7 +35,7 @@ const transition_name = product.slug;
         {product.name}
       </p>
       <div class="text-right mt-4" transition:name={`${transition_name} price`}>
-        <span class="font-bold text-chalet-green-900">${product.price}</span>
+        <span class="font-bold text-chalet-green-900">{formatCurrency(product.price)}</span>
       </div>
     </div>
   </article>
