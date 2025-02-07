@@ -10,7 +10,7 @@ export default function ShoppingCart() {
     if (cart){
       setCartItems(JSON.parse(cart));
     }
-  }, [])
+  }, []);
 
   return (
     <div class="w-full sm:w-3/4 px-10 py-10 bg-chalet-green-400 rounded-xl md:mr-2">

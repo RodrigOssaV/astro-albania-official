@@ -1,5 +1,6 @@
 import { products } from "@constants/product";
 import { formatCurrency } from "@hooks/formatCurrency";
+import ButtonDeleteItem from "./ButtonDeleteItem";
 
 export default function ShoppingCartItem({item}) {
 
@@ -35,9 +36,7 @@ export default function ShoppingCartItem({item}) {
         </p>
         <div class="flex items-center justify-between pt-5">
           <div class="flex itemms-center">
-            <p class="text-xs leading-3 underline text-red-500 cursor-pointer">
-              Remove
-            </p>
+            <ButtonDeleteItem product={product} />
           </div>
           <p class="text-lg font-black leading-none text-gray-800">{formatCurrency(product.price)}<span class="text-sm"> x{item.quantity}</span></p>
         </div>
