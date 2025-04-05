@@ -21,9 +21,9 @@ export interface Address {
 export const addresses: Address[] = [
   { 
     id: 1,
-    name: 'paseo independencia',
-    number: 572,
-    city: 'rancagua',
+    name: 'Obispo Javier Vasquez',
+    number: 3555,
+    city: 'Santiago',
     schedule_week: 'Lunes - Sábado',
     schedule_week_open: '9:30 hr',
     schedule_week_close: '20:00 hr',
@@ -35,7 +35,7 @@ export const addresses: Address[] = [
     },
     encoded_address: 'Paseo+Independencia+-+%23572%2C+Rancagua',
   },
-  { 
+  /* { 
     id: 2,
     name: '5 de abril',
     number: 812,
@@ -50,12 +50,12 @@ export const addresses: Address[] = [
       url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.6595912759!2d-72.10753261105612!3d-36.61050679480504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96692829b107e6e1%3A0x6b4dcaab1afc6765!2s5%20de%20Abril%20812%2C%203800876%20Chill%C3%A1n%2C%20%C3%91uble!5e0!3m2!1ses-419!2scl!4v1737246062900!5m2!1ses-419!2scl',
     },
     encoded_address: '5+de+Abril+812%2C+3800876+Chill%C3%A1n%2C+%C3%91uble',
-  },
+  }, */
   { 
     id: 3,
-    name: 'maipú',
-    number: 623,
-    city: 'concepción',
+    name: 'Tucapel',
+    number: 1002,
+    city: 'Concepción',
     schedule_week: 'Lunes - Viernes',
     schedule_week_open: '9:30 hr',
     schedule_week_close: '19:30 hr',
@@ -72,9 +72,9 @@ export const addresses: Address[] = [
   },
   { 
     id: 4,
-    name: 'arturo prat',
-    number: 732,
-    city: 'temuco',
+    name: 'Francisco Bilbao',
+    number: 1305,
+    city: 'Temuco',
     schedule_week: 'Lunes - Viernes',
     schedule_week_open: '9:30 hr',
     schedule_week_close: '20:00 hr',
@@ -89,7 +89,7 @@ export const addresses: Address[] = [
     },
     encoded_address: 'Arturo+Prat+732%2C+4791248+Temuco%2C+Araucan%C3%ADa'
   },
-  { 
+  /* { 
     id: 5,
     name: 'avenida alemana',
     number: 715,
@@ -104,5 +104,5 @@ export const addresses: Address[] = [
       url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2880906210535!2d-72.61511712333972!3d-38.73415078719999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67bfbdd59%3A0x74dcec435733ba3b!2sAv.%20Alemania%20715%2C%204801008%20Temuco%2C%20Araucan%C3%ADa!5e0!3m2!1ses-419!2scl!4v1737246167167!5m2!1ses-419!2scl',
     },
     encoded_address: 'Av.+Alemania+715%2C+4801008+Temuco%2C+Araucan%C3%ADa',
-  },
+  }, */
 ]

@@ -7,37 +7,37 @@ export interface Enterprice {
 }
 
 export const enterprice: Enterprice = {
-  name: 'Albania',
-  mail: 'tiendas.albania@gmail.com',
+  name: 'Los Europeos',
+  mail: 'correo.contacto@loseuropeos.com',
   phone: '+569 57457027',
   account: [
     {
       id: 1,
       name: 'TikTok',
-      url: 'https://www.tiktok.com/@albania_chile',
-      title: 'Página oficial TikTok de Albania Chile',
+      url: '#',
+      title: 'Página oficial TikTok de Los Europeos',
       icon: 'TikTok',
     },
     {
       id: 2,
       name: 'Instagram',
-      url: 'https://www.instagram.com/albania_chile',
-      title: 'Página oficial Instagram de Albania Chile',
+      url: '#',
+      title: 'Página oficial Instagram de Los Europeos',
       icon: 'Instagram',
     },
     {
       id: 3,
       name: 'Facebook',
-      url: 'https://www.facebook.com/profile.php?id=100093969109971',
-      title: 'Página oficial Facebook de Albania Chile',
+      url: '#',
+      title: 'Página oficial Facebook de Los Europeos',
       icon: 'Facebook',
     }
   ],
   headquarters: {
-    address: 'maipú',
-    number: 623,
+    address: 'Tucapel',
+    number: 1002,
     city: 'concepción',
     contry: 'chile',
-    complete: 'Maipú #623, Concepción. Chile'
+    complete: 'Tucapel #1002, Concepción. Chile'
   }
 }

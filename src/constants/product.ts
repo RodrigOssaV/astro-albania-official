@@ -4,6 +4,15 @@ export enum ProductCategory {
   Shoes = "shoes",
 }
 
+export enum ProductOrigen  {
+  USA = 'usa',
+  EUR = 'europa',
+  ITA = 'italia',
+  ENG = 'inglaterra',
+  DEN = 'dinamarca',
+  POL = 'polonia'
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -15,6 +24,7 @@ export interface Product {
   cover: string;
   coverCredits: string;
   category: ProductCategory;
+  origin: ProductOrigen
   options_products: any;
 }
 
@@ -31,6 +41,7 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/A7f7XRKgUWc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.ENG,
     options_products: [
       {
         id: 1,
@@ -62,6 +73,7 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/acn5ERAeSb4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.ITA,
     options_products: [
       {
         id: 1,
@@ -89,6 +101,7 @@ export const products: Product[] = [
     coverCredits:
       "https://unsplash.com/photos/Wr0TpKqf26s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.USA,
     options_products: [
       {
         id: 1,
@@ -115,7 +128,8 @@ export const products: Product[] = [
     cover: "/productos/tradicional-fardo.webp",
     coverCredits:
       "https://unsplash.com/photos/Wr0TpKqf26s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
-    category: ProductCategory.Shirts,
+    category: ProductCategory.Pants,
+    origin: ProductOrigen.USA,
     options_products: [
       {
         id: 1,
@@ -139,14 +153,15 @@ export const products: Product[] = [
     price: 27000,
     description: 'Fardo de ropa vintage europeo, ideal para quienes buscan piezas con historia y estilo retro.',
     description_two: 'Incluye prendas con diseños clásicos, telas suaves y detalles únicos que evocan la moda europea de décadas pasadas.',
-    cover: '/productos/vintage-europeo-fardo.webp',
+    cover: "/productos/tradicional-ecologica-fardo.webp",
     coverCredits:
       'https://unsplash.com/photos/Jztmx9yqjBw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.DEN,
     options_products: [
-      { id: 1, cover: '/examples/example-13.webp' },
-      { id: 2, cover: '/examples/example-14.webp' },
-      { id: 3, cover: '/examples/example-15.webp' },
+      { id: 1, cover: '/examples/example-3.webp' },
+      { id: 2, cover: '/examples/example-5.webp' },
+      { id: 3, cover: '/examples/example-7.webp' },
     ],
   },
   {
@@ -157,14 +172,15 @@ export const products: Product[] = [
     price: 22000,
     description: 'Fardo de ropa casual urbana, para quienes buscan comodidad sin sacrificar el estilo.',
     description_two: 'Contiene prendas modernas y versátiles, ideales para el día a día en la ciudad.',
-    cover: '/productos/casual-urbana-fardo.webp',
+    cover: "/productos/tradicional-ecologica-fardo.webp",
     coverCredits:
       'https://unsplash.com/photos/jpqyfK7GB4w?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.USA,
     options_products: [
-      { id: 1, cover: '/examples/example-16.webp' },
-      { id: 2, cover: '/examples/example-17.webp' },
-      { id: 3, cover: '/examples/example-18.webp' },
+      { id: 1, cover: '/examples/example-6.webp' },
+      { id: 2, cover: '/examples/example-7.webp' },
+      { id: 3, cover: '/examples/example-8.webp' },
     ],
   },
   {
@@ -175,14 +191,15 @@ export const products: Product[] = [
     price: 24000,
     description: 'Fardo de ropa retro americana, con prendas que capturan la esencia de décadas pasadas.',
     description_two: 'Incluye chaquetas, camisas y pantalones con detalles únicos y colores vibrantes.',
-    cover: '/productos/retro-americana-fardo.webp',
+    cover: "/productos/tradicional-ecologica-fardo.webp",
     coverCredits:
       'https://unsplash.com/photos/GJao3ZTX9gU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.USA,
     options_products: [
-      { id: 1, cover: '/examples/example-19.webp' },
-      { id: 2, cover: '/examples/example-20.webp' },
-      { id: 3, cover: '/examples/example-21.webp' },
+      { id: 1, cover: '/examples/example-9.webp' },
+      { id: 2, cover: '/examples/example-2.webp' },
+      { id: 3, cover: '/examples/example-1.webp' },
     ],
   },
   {
@@ -193,14 +210,15 @@ export const products: Product[] = [
     price: 28000,
     description: 'Fardo de ropa con estilo japonés, perfecto para quienes valoran el minimalismo y la estética contemporánea.',
     description_two: 'Contiene prendas inspiradas en el diseño japonés moderno, con cortes limpios y colores neutros.',
-    cover: '/productos/estilo-japones-fardo.webp',
+    cover: "/productos/tradicional-ecologica-fardo.webp",
     coverCredits:
       'https://unsplash.com/photos/0bKdPUNGQfc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.USA,
     options_products: [
-      { id: 1, cover: '/examples/example-22.webp' },
-      { id: 2, cover: '/examples/example-23.webp' },
-      { id: 3, cover: '/examples/example-24.webp' },
+      { id: 1, cover: '/examples/example-2.webp' },
+      { id: 2, cover: '/examples/example-11.webp' },
+      { id: 3, cover: '/examples/example-8.webp' },
     ],
   },
   {
@@ -211,14 +229,15 @@ export const products: Product[] = [
     price: 23000,
     description: 'Fardo de ropa minimalista nórdico, pensado para quienes buscan un look limpio, elegante y funcional.',
     description_two: 'Incluye prendas con cortes simples, tonos neutros y materiales de alta calidad.',
-    cover: '/productos/minimalista-nordico-fardo.webp',
+    cover: "/productos/tradicional-ecologica-fardo.webp",
     coverCredits:
       'https://unsplash.com/photos/FV3GConVSss?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
     category: ProductCategory.Shirts,
+    origin: ProductOrigen.USA,
     options_products: [
-      { id: 1, cover: '/examples/example-25.webp' },
-      { id: 2, cover: '/examples/example-26.webp' },
-      { id: 3, cover: '/examples/example-27.webp' },
+      { id: 1, cover: '/examples/example-6.webp' },
+      { id: 2, cover: '/examples/example-3.webp' },
+      { id: 3, cover: '/examples/example-9.webp' },
     ],
   },
 ];
