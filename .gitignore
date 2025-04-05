@@ -24,7 +24,7 @@ pnpm-debug.log*
 .idea/
 
 # source videos and images
-public/
+# public/
 
 # personal setting
 development.md
